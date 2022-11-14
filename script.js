@@ -239,20 +239,30 @@ const runActormovieDetails = async (actor) => {
   };
 
 const renderMoviesofActor = (actor) => {
+  const moviesContainer = document.createElement("div");
+  moviesContainer.className = "movies-container";
+
      actor.cast.map((cast) => {
-      const actormovieDiv = document.createElement("div");
-      actormovieDiv.className = "ActorMovies"
+      const movieDiv = document.createElement("div");
+      movieDiv.className = "movie-card";
+
      if(cast.backdrop_path != null){
-     actormovieDiv.innerHTML = `
-          <img src="${BACKDROP_BASE_URL + cast.backdrop_path}" alt="Movie poster">
-          <h3>${cast.title}</h3>`;
-     }
-     actormovieDiv.addEventListener("click", () => {
-      movieDetails(cast);
-    }); 
-      CONTAINER.appendChild(actormovieDiv);
+      movieDiv.innerHTML = `
+      <div>
+          <img class="movie-poster" src="${BACKDROP_BASE_URL + cast.backdrop_path}" alt="${cast.title} poster">
+          <h3 class="movie-title">${cast.title}</h3></div>
+          <h3 class="movie-RD">${cast.release_date}</h3></div>
+      <div class="overlay">
+      <p class="img-description">${cast.title} <br> ${cast.vote_average}</p>
+      </div>`;
+      movieDiv.addEventListener("click", () => {
+        movieDetails(cast);
+      }); 
+      moviesContainer.appendChild(movieDiv);
+    }
     });
-   };
+    CONTAINER.appendChild(moviesContainer);
+  };
 
 
         //FETCH ACTORS OF A CERTAIN MOVIE
