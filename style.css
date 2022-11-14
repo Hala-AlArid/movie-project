@@ -319,8 +319,17 @@ ul {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.actors-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 @media screen and (max-width: 1000px) and (min-width: 600px) {
   .movies-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .actors-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -328,6 +337,10 @@ ul {
 
 @media screen and (max-width: 600px) and (min-width: 1px) {
   .movies-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .actors-container {
     display: grid;
     grid-template-columns: 1fr;
   }
