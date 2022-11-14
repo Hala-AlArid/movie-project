@@ -2,33 +2,115 @@
     width: 100%;
 }
 
-h2{
-  text-align: center;
-
-}
-
-hr{
-  width: 50%;
-  text-align: center;
-}
-
 /* this is for all movies style in home */
 
-.container {
-    padding-top: 32px;
-    width: 100%;
-    margin: 0;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    text-align: center;
-    gap: 3em;
+.content{
+  margin: 100px;
 }
 
-.container img{
+.page-description{
+
+}
+
+.description{
+  text-align: center;
+}
+
+.page-description hr{
+  width: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.movies-container, .actors-container {
+  padding-top: 32px;
   width: 100%;
-  height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  text-align: center;
+  gap: 3em;
+}
+
+.movie-card, .actor-card{
+  margin-bottom: 30px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.movie-poster{
+  width: 100%;
   cursor: pointer;
+  aspect-ratio: 4.5/3;
+
+}
+
+.actor-poster{
+  margin: 10px;
+}
+
+.movie-title{
+
+}
+
+.movie-RD{
+  color: rgb(138, 138, 138);
+}
+
+/* don't change .img-description and hover effect */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.movie-card:hover .overlay {
+  opacity: 1;
+}
+
+.actor-card:hover .overlay {
+  opacity: 1;
+}
+
+.img-description, .view-actor {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* style for actors page */
+
+.container2{
+  display: grid;
+  grid-template-columns: auto;
+
+}
+
+.actors-container{
+  padding-top: 32px;
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  text-align: center;
+  gap: 3em;
 }
 
 .container h3{
@@ -39,9 +121,8 @@ hr{
   
 }
 
-.content{
-  margin: 100px;
-}
+
+
 
 /* this is for movie details */
 
@@ -82,6 +163,26 @@ hr{
 #actors {
     margin: 24px 16px 0 0;
 }
+
+/* nisreen edited here*/
+#actor-backdrop{
+  height: 400px;
+  width: 350px;
+}
+
+.actorDiv{
+  height: 400px;
+  width: 350px; 
+}
+
+/* this class is used to style the movies of each actor and the actors of each movie*/
+.ActorMovies{
+  height: 400px;
+  width: 350px;
+}
+
+
+
 
 /* style for navbar */
 
@@ -206,3 +307,5 @@ ul {
 .github{
     font-size: 50px;
 }
+
+/* The end */
