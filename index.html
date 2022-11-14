@@ -15,19 +15,20 @@
 
   <!-- Final version -->
   
-    <nav class="nav">
+    <nav class="nav relative mx-auto py-5">
+      
         <div>
-            <h1 class="logo">Cinephilia</h1>
+            <h1 class="logo text-3xl">Cinephilia</h1>
         </div>
     
         <div class="search">
-            <input type="text" class="searchTerm" placeholder="What are you looking for?">
+            <input type="text" class="searchTerm bg-gray-900 p-6" placeholder="What are you looking for?">
             <button type="submit" class="searchButton">
-              <i class="fa fa-search"></i>
+              <i class="fa fa-search p-4 bg-gray-200 rounded-lg"></i>
            </button>
          </div>
     
-        <ul>
+        <ul class="hidden md:flex">
             <li class="Home-link"><a href="index.html">Home</a></li>
     
             <li class="dropdown movies-link">
@@ -49,13 +50,14 @@
                   <a href="#" id="filter4">Up coming</a>
                 </div>
               </li>
-        </ul>    
+        </ul>
+        
     </nav>
 
         <div class="content">
           <div class="page-description">
             <h2 class="description"></h2>
-            <hr>
+            <hr class="mx-auto">
           </div>
           <div class="container"></div>
         </div>
