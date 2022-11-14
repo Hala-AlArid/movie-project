@@ -9,7 +9,6 @@
 }
 
 .page-description{
-
 }
 
 .description{
@@ -71,7 +70,7 @@
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: #15803d;
 }
 
 .movie-card:hover .overlay {
@@ -189,14 +188,14 @@
 nav{
   display: flex;
   justify-content: space-between;
-  background-color: #333;
+  background-color: #15803d;
   align-items: center;
   padding-left: 30px;
   padding-right: 30px;
 }
 
 .logo{
-  color: white;
+  color: #333;
   font-family: 'Henny Penny', cursive;
 }
 
@@ -208,26 +207,30 @@ nav{
 
 .searchTerm {
    width: 100%;
-   border: 3px solid rgb(216, 72, 72);
+   border: 3px solid #166534;
    border-right: none;
    padding: 5px;
    height: 20px;
    border-radius: 5px 0 0 5px;
    outline: none;
-   color: rgb(216, 72, 72);
+   color: #166534;
+}
+
+.searchTerm::placeholder {
+  color: #475569;
 }
 
 .searchTerm:focus{
-    color: rgb(216, 72, 72);
+    color: white
 }
 
 .searchButton {
    width: 40px;
    height: 36px;
-   border: 1px solid rgb(216, 72, 72);
-   background: rgb(216, 72, 72);
+   border: 1px solid #166534;
+   background: #166534;
    text-align: center;
-   color: #fff;
+   color: #333;
    border-radius: 0 5px 5px 0;
    cursor: pointer;
    font-size: 20px;
@@ -240,7 +243,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #15803d; 
   }
   
   li {
@@ -257,7 +260,7 @@ ul {
   }
   
   li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: #333;
   }
 
   
@@ -307,5 +310,30 @@ ul {
 .github{
     font-size: 50px;
 }
+
+
+/* Hani (For responsive container) */
+
+.movies-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 600px) {
+  .movies-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 1px) {
+  .movies-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hani (Ending responsive container) */
+
 
 /* The end */
