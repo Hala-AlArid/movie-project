@@ -66,6 +66,7 @@ const renderMovies = (movies) => {
 
 const renderMovie = (movie) => {
   CONTAINER.classList.add("container2")
+
   CONTAINER.innerHTML = `
     <div class="row">
         <div class="col-md-4">
@@ -85,7 +86,7 @@ const renderMovie = (movie) => {
             <p id="movie-overview">${movie.overview}</p>
             <h3>Produced By:</h3>
             <div>
-            <p>${movie.production_companies[0].name}</p>
+            <p id ="company-name">${movie.production_companies[0].name}</p>
             <img id="company-logo" src=${BACKDROP_BASE_URL + movie.production_companies[0].logo_path}>
             </div>
             

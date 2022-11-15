@@ -8,17 +8,12 @@
   margin: 100px;
 }
 
-.page-description{
-}
-
 .description{
   text-align: center;
-}
-
-.page-description hr{
-  width: 50%;
-  text-align: center;
+  font-size: 23px;
   margin-bottom: 20px;
+  font-weight: 600;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .movies-container, .actors-container {
@@ -32,30 +27,47 @@
   gap: 3em;
 }
 
-.movie-card, .actor-card{
+
+.movie-card{
   margin-bottom: 30px;
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   transition: 0.3s;
+  border-radius: 20px;
+}
+
+.actor-card{
+  width: 100%;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  transition: 0.3s;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
 }
 
 .movie-poster{
   width: 100%;
   cursor: pointer;
   aspect-ratio: 4.5/3;
-
+  border-radius: 20px 20px 0 0px;
 }
 
 .actor-poster{
-  margin: 10px;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 20px;
 }
 
-.movie-title{
-
+.movie-title, .actor-name{
+  font-weight: 600;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
 }
 
 .movie-RD{
   color: rgb(138, 138, 138);
+  margin: 20px;
 }
 
 /* don't change .img-description and hover effect */
@@ -71,15 +83,16 @@
   opacity: 0;
   transition: .5s ease;
   background-color: #15803d;
+  border-radius: 20px;
 }
 
 .movie-card:hover .overlay {
-  opacity: 0.8;
+  opacity: 0.9;
   cursor:pointer;
 }
 
 .actor-card:hover .overlay {
-  opacity: 0.8;
+  opacity: 0.9;
   cursor:pointer;
 }
 
@@ -103,32 +116,11 @@
 
 }
 
-.actors-container{
-  padding-top: 32px;
-  width: 100%;
-  margin: 0;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-  text-align: center;
-  gap: 3em;
-}
-
-.container h3{
-
-}
-
-.container div{
-  
-}
-
-
-
 
 /* this is for movie details */
 
 .row{
-
+text-align: center;
 }
 
 .col-md-4{
@@ -144,7 +136,11 @@
 }
 
 .col-md-8 h2{
-
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .col-md-8 p{
@@ -152,7 +148,19 @@
 }
 
 .col-md-8 h3{
+  margin: 20px;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
 
+#company-logo{
+width: 100%;
+margin: auto;
+}
+
+#company-name{
+  margin-bottom: 20px;
 }
 
 .col-md-8 ul{
@@ -192,12 +200,12 @@ nav{
   justify-content: space-between;
   background-color: #15803d;
   align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 10px 30px 10px 30px;
 }
 
 .logo{
-  color: #333;
+  font-size: 30px;
+  color: black;
   font-family: 'Henny Penny', cursive;
 }
 
@@ -212,14 +220,13 @@ nav{
    border: 3px solid #166534;
    border-right: none;
    padding: 5px;
-   height: 20px;
    border-radius: 5px 0 0 5px;
    outline: none;
    color: #166534;
 }
 
 .searchTerm::placeholder {
-  color: #475569;
+  color: #2b3542;
 }
 
 .searchTerm:focus{
@@ -227,8 +234,7 @@ nav{
 }
 
 .searchButton {
-   width: 40px;
-   height: 36px;
+   width: 40px; 
    border: 1px solid #166534;
    background: #166534;
    text-align: center;
@@ -238,14 +244,15 @@ nav{
    font-size: 20px;
 }
 
-
+#search-icon{
+  color: white;
+}
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #15803d; 
   }
   
   li {
@@ -258,11 +265,10 @@ ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-
+    font-weight: 600;
   }
   
   li a:hover, .dropdown:hover .dropbtn {
-    background-color: #15803d;
     color: white;
   }
 
@@ -300,6 +306,10 @@ ul {
     display: block;
   }
 
+  #menu-icon{
+    display: none;
+  }
+
   /* end style for navbar */
 
 
@@ -310,6 +320,9 @@ ul {
     text-align: center;
     padding: 50px;
     color: black;
+    font-size: 20px;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .github{
@@ -338,6 +351,7 @@ ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
 }
 
 @media screen and (max-width: 600px) and (min-width: 1px) {
@@ -349,6 +363,7 @@ ul {
     display: grid;
     grid-template-columns: 1fr;
   }
+
 }
 
 
