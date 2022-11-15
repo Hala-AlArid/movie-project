@@ -74,15 +74,17 @@
 }
 
 .movie-card:hover .overlay {
-  opacity: 1;
+  opacity: 0.8;
+  cursor:pointer;
 }
 
 .actor-card:hover .overlay {
-  opacity: 1;
+  opacity: 0.8;
+  cursor:pointer;
 }
 
 .img-description, .view-actor {
-  color: white;
+  color: black;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -252,7 +254,7 @@ ul {
   
   li a, .dropbtn {
     display: inline-block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -260,7 +262,8 @@ ul {
   }
   
   li a:hover, .dropdown:hover .dropbtn {
-    background-color: #333;
+    background-color: #15803d;
+    color: white;
   }
 
   
@@ -271,7 +274,7 @@ ul {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #15803d;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -289,7 +292,9 @@ ul {
     cursor: pointer;
   }
   
-  .dropdown-content a:hover {background-color: #f1f1f1;}
+  .dropdown-content a:hover {
+    color: white;
+  }
   
   .dropdown:hover .dropdown-content {
     display: block;
@@ -301,10 +306,10 @@ ul {
   /* style for footer */
 
   .footer-div{
-    background-color: black;
+  background-color: #15803d;
     text-align: center;
     padding: 50px;
-    color: white;
+    color: black;
 }
 
 .github{
@@ -346,7 +351,34 @@ ul {
   }
 }
 
+
+
+
 /* Hani (Ending responsive container) */
 
+
+/* Hani (Movie details) */
+#movie-backdrop{
+  border-radius: 2em;
+}
+
+#company-logo{
+  max-width: 400px;
+}
+
+.col-md-8 {
+  border-style: solid;
+  background-color: #15803d;
+  margin-top: 3em;
+  padding: 2em;
+  border-radius: 3em;
+}
+
+.movie-trailer {
+  margin: 1.5em;
+  font-size: 1.5em;
+}
+
+/* Hani (Ending Movie details) */
 
 /* The end */
