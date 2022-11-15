@@ -134,7 +134,7 @@ const renderTrailer = (key) =>{
   trailerDiv.classList.add("trailer-container")
 
   trailerDiv.innerHTML = 
-  `<h3>Watch the Trailer<h3><br><br>
+  `<h3 class="movie-trailer">Watch the Trailer<h3><br><br>
   <iframe width="420" height="345" src="https://www.youtube.com/embed/${key}"></iframe>`
 
   CONTAINER.appendChild(trailerDiv);
